@@ -5,13 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>A Good Shop - Lorena Hurtado</title>
     <link rel="stylesheet" href="css/style.css">
+    <!--Importar librería de iconos-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
-<body>
-    <!-- El wrapper envuelve todo el contenido de la página -->
-    <div class="wrapper">
+<body> 
     <!-- Cabecera de la página web- Incluye el logo y el menu de navegación -->
     <header id="header-container">
+        <!--Este wrapper envuelve el contenido dentro del header-->
+        <div class="wrapper wrapper-header">
         <!--Logotipo de la tienda-->
         <div class="logotipo">
             <h1>agoodshop</h1>
@@ -22,17 +26,21 @@
                 <li><a href="#">Tienda</a></li>
                 <li><a href="#">Accesorios</a></li>
                 <li><a href="#">Soporte</a></li>
-                <li><a href="#">Contactar</a></li> <!--Posiblemente inline-block o button-->
+                <li><button class="contact"><a href="#">Contactar</a></button></li>
             </ul>
         </nav>
+        </div>
     </header>
     <!--Fin de la cabecera-->
 
     <!-- Contenido principal de la página -->
     <main>
+        <!--Este wrapper envuelve todo el contenido principal de la página web-->
+        <div class="wrapper">
         <!--Sección de la oferta principal-->
         <section class="section-oferta">
-            <img src="https://placehold.co/400x400">
+            <span class="tag-green">128gb</span>
+            <img src="https://placehold.co/400x400" alt="">
             <div class="container-oferta">
                 <p class="oferta">OFERTA</p>
                 <h1>Compra un iFhone 13 Pro</h1>
@@ -40,30 +48,61 @@
                 <p>Pantalla Super Retina XDR de 6,1 pulgadas. Diseño robusto con bordes planos y resistente al agua.</p>
                 <div class="precio-compra">
                     <p class="precio">938,99</p>
-                    <button class="boton-comprar">Comprar</button>
+                    <button class="button-compra">Comprar</button>
                 </div>
                 <!--Lista de ventajas de compra-->
                 <ul class="ventajas">
-                    <li>Envío rápido, gratuito y sin contacto</li>
-                    <li>Devoluciones fáciles y gratuitas</li>
-                    <li>Posibilidad de pago a plazos</li>
+                    <li>
+                        <i class="fa-solid fa-box"></i>
+                        <p>Envío rápido, gratuito y sin contacto</p>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-rotate-right"></i>
+                        <p>Devoluciones fáciles y gratuitas</p>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-file-invoice-dollar"></i>
+                        <p>Posibilidad de pago a plazos</p>
+                    </li>
                 </ul>
             </div>
         </section>
         <!--Sección de artículos recomendados-->
         <section class="section-recomendados">
             <h2>Artículos Recomendados</h2>
-            <article></article>
-            <article></article>
-            <article></article>
-            <article></article>
+            <article>
+                <img src="https://placehold.co/250x150" alt="">
+                <h4>Cargador</h4>
+                <p>El adaptador de corriente USB-C de 20W es muy rápido y eficiente, así que va de perlas para cargar tus dispositivos en cualquier lugar.</p>
+            </article>
+            <article>
+                <img src="https://placehold.co/250x150" alt="">
+                <h4>Base de carga inalámbrica</h4>
+                <span class="tag-red">Oferta</span>
+                <p>Sistema de soporte para que sigas usando tu smartphone cómodamente mientras lo cargas. Compatible con carga rápida de 20W.</p>
+            </article>
+            <article>
+                <img src="https://placehold.co/250x150" alt="">
+                <h4>Funda Piel</h4>
+                <p>Fabricadas en piel europea curtida y teñida con un proceso especial, son suaves al tacto y adquieren un tono natural con el tiempo. Los botones de aluminio combinan a la perfección con el acabado de la piel.</p>
+            </article>
+            <article>
+                <img src="https://placehold.co/250x150" alt="">
+                <h4>Base de carga inalámbrica</h4>
+                <span class="tag-blue">Nuevo</span>
+                <p>Sistema de soporte para que sigas usando tu smartphone cómodamente mientras lo cargas. Compatible con carga
+                    rápida de 20W.</p>
+            </article>
+           
         </section>
         <!--Sección de sorteo-->
         <section>
             <!-- Información sobre el sorteo -->
+            <div class="sorteo-info">
             <h3 class="title-sorteo">Participa en el sorteo de un iFhone 13</h3>
             <p>Este verano, ¡venimos cargados de premios! Así que antes de irte de vacaciones, ¡participa en nuestro sorteo! y podrás llevarte un regalo increíble como un nuevo iFhone 13</p>
             <p>Rellena este formulario para ser uno de los afortunados</p>
+            </div>
 
             <!-- Formulario para el sorteo -->
             <form id="formulario-sorteo" action="#" method="post">
@@ -76,12 +115,12 @@
                 <input type="submit" value="enviar" class="enviar-button">
             </form>
         </section>
+        </div>
     </main>
 
     <footer>
         <p class="footer-copyright">&copy;agoodshop</p>
     </footer>
-    </div>
     
 </body>
 </html>
