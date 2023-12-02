@@ -3,13 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>agoodshop</title>
+    <title>A Good Shop - Lorena Hurtado</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
-    <header>
-        <!--Logotype-->
-        <nav>
+    <!-- El wrapper envuelve todo el contenido de la página -->
+    <div class="wrapper">
+    <!-- Cabecera de la página web- Incluye el logo y el menu de navegación -->
+    <header id="header-container">
+        <!--Logotipo de la tienda-->
+        <div class="logotipo">
+            <h1>agoodshop</h1>
+        </div>
+        <!--Menu de navegación-->
+        <nav id="menu">
             <ul>
                 <li><a href="#">Tienda</a></li>
                 <li><a href="#">Accesorios</a></li>
@@ -18,21 +26,62 @@
             </ul>
         </nav>
     </header>
+    <!--Fin de la cabecera-->
 
+    <!-- Contenido principal de la página -->
     <main>
-        <section class="wrapper">
-            <img src="#">
-            <div>
-                <!--p?-->
-                <h1></h1>
-                <p></p>
+        <!--Sección de la oferta principal-->
+        <section class="section-oferta">
+            <img src="https://placehold.co/400x400">
+            <div class="container-oferta">
+                <p class="oferta">OFERTA</p>
+                <h1>Compra un iFhone 13 Pro</h1>
+                <p>iFhone 13: Tu nuevo superpoder. Nuestro sistema de cámara dual más avanzado. El chip que hace morder el polvo a la competencia. Un subidón de autonomía que vaya si notarás. Ceramic Shield, más duro que cualquier vidrio de smartphone</p>
+                <p>Pantalla Super Retina XDR de 6,1 pulgadas. Diseño robusto con bordes planos y resistente al agua.</p>
+                <div class="precio-compra">
+                    <p class="precio">938,99</p>
+                    <button class="boton-comprar">Comprar</button>
+                </div>
+                <!--Lista de ventajas de compra-->
+                <ul class="ventajas">
+                    <li>Envío rápido, gratuito y sin contacto</li>
+                    <li>Devoluciones fáciles y gratuitas</li>
+                    <li>Posibilidad de pago a plazos</li>
+                </ul>
             </div>
         </section>
-        <section></section>
-        <section></section> <!--Aside?-->
+        <!--Sección de artículos recomendados-->
+        <section class="section-recomendados">
+            <h2>Artículos Recomendados</h2>
+            <article></article>
+            <article></article>
+            <article></article>
+            <article></article>
+        </section>
+        <!--Sección de sorteo-->
+        <section>
+            <!-- Información sobre el sorteo -->
+            <h3 class="title-sorteo">Participa en el sorteo de un iFhone 13</h3>
+            <p>Este verano, ¡venimos cargados de premios! Así que antes de irte de vacaciones, ¡participa en nuestro sorteo! y podrás llevarte un regalo increíble como un nuevo iFhone 13</p>
+            <p>Rellena este formulario para ser uno de los afortunados</p>
+
+            <!-- Formulario para el sorteo -->
+            <form id="formulario-sorteo" action="#" method="post">
+                <label for="nombre">Nombre</label>
+                <input type="text" id="nombre" name="nombre" placeholder="Ari Gold" required>
+
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="arigold@mga.com" required>
+
+                <input type="submit" value="enviar" class="enviar-button">
+            </form>
+        </section>
     </main>
 
-    <footer></footer>
+    <footer>
+        <p class="footer-copyright">&copy;agoodshop</p>
+    </footer>
+    </div>
     
 </body>
 </html>
