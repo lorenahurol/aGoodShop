@@ -1,3 +1,5 @@
+/* Estilos generales del documento */
+
 * {
     margin: 0;
     padding: 0;
@@ -6,6 +8,7 @@
     text-decoration: none;
 }
 
+/* Estilos generales para los wrapper */
 
 .wrapper {
     padding-left: 20px;
@@ -15,9 +18,12 @@
     margin-right: auto;
 }
 
+/* Estilos del header */
+
 #header-container {
     border-bottom: 1px solid rgba(212, 212, 212, 0.8);
 }
+
 .wrapper-header {
     height: 90px;
     margin: 0px auto;
@@ -58,3 +64,43 @@
     border: 1px solid rgba(212, 212, 212, 0.8);
     border-radius: 5px;
 }
+
+/* Estilos de la sección de contenido principal: main */
+
+.wrapper-main {
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+#section-oferta {
+    display: flex;
+    position: relative;
+}
+
+.container-imagen .container-oferta {
+    flex: 1;
+    justify-content: space-between;
+
+}
+
+.span-tag-green {
+    /* Posicionar la etiqueta sobre la imagen */
+    position: absolute;
+    margin-top: 1rem;
+    margin-left: 1rem;
+    padding: 10px;
+    background: rgb(8, 192, 8);
+    color: white;
+    font-weight: 700;
+}
+
+
+footer {
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    border-top: 1px solid rgba(212, 212, 212, 0.8);
+}
+
