@@ -8,7 +8,15 @@
     text-decoration: none;
 }
 
-/* Estilos generales para los wrapper */
+/* Custom properties */
+:root {
+    --color-fondo: rgb(255, 255, 255);
+    --color-fuente: rgb(0, 0, 0);
+    --color-primario: #3B82F6;
+    --color-secundario: #E14444;
+}
+
+/* Estilos general del wrapper que envuelve la página */
 
 .wrapper {
     padding-left: 20px;
@@ -18,82 +26,11 @@
     margin-right: auto;
 }
 
-/* Estilos del header */
+/* Estilos generales del header y el footer */
 
-#header-container {
+#header__container {
     border-bottom: 1px solid rgba(212, 212, 212, 0.8);
 }
-
-.wrapper-header {
-    height: 90px;
-    margin: 0px auto;
-
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-}
-
-.logotipo {
-    font-size: 0.7rem;
-    flex-grow: 1;
-    flex-basis: 65%;
-}
-
-#menu {
-    flex-grow: 1;
-    flex-basis: 30%;
-    height: 100%;
-}
-
-#menu ul {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    height: 100%;
-    align-items: center;
-    justify-content: space-between;
-
-    font-size: 1rem;
-    list-style: none;
-}
-
-.contact {
-    padding: 12px;
-    font-size: 1rem;
-    background: none;
-    border: 1px solid rgba(212, 212, 212, 0.8);
-    border-radius: 5px;
-}
-
-/* Estilos de la sección de contenido principal: main */
-
-.wrapper-main {
-    margin-top: 40px;
-    margin-bottom: 40px;
-}
-
-#section-oferta {
-    display: flex;
-    position: relative;
-}
-
-.container-imagen .container-oferta {
-    flex: 1;
-    justify-content: space-between;
-
-}
-
-.span-tag-green {
-    /* Posicionar la etiqueta sobre la imagen */
-    position: absolute;
-    margin-top: 1rem;
-    margin-left: 1rem;
-    padding: 10px;
-    background: rgb(8, 192, 8);
-    color: white;
-    font-weight: 700;
-}
-
 
 footer {
     height: 60px;
@@ -103,4 +40,162 @@ footer {
     font-weight: 700;
     border-top: 1px solid rgba(212, 212, 212, 0.8);
 }
+
+/* Mobile First */
+
+    /* Estilos del header */
+
+    /* Estilos de la sección de contenido principal: main */
+    
+    .main {
+        margin-top: 40px;
+        margin-bottom: 40px;
+    }
+
+    p {
+        font-size: 1rem;
+        color: var(--color-fuente);
+        line-height: 1.3;
+        max-width: 450px; 
+    }
+        
+    /* Estilos de la primera sección: oferta */
+    
+    #section__oferta {
+        
+    }
+
+        .span__oferta {
+            font-size: 1rem;
+            font-weight: 700;
+            color: var(--color-secundario);
+        }
+
+        .title__oferta {
+            font-size: 2.2rem;
+            color: var(--color-fuente);
+            margin: 0;
+        }
+    
+        .container__imagen {
+            position: relative;
+            /* Position relative en el contenedor padre para poder colocar la etiqueta hijo en posicion absoluta */
+        }
+    
+        .container__imagen img {
+            width: 100%;
+            max-width: 390px;
+            /*Tamaño máximo de la imagen cuando escale en diferentes dispositivos*/
+        }
+    
+        .span__tag--green {
+            /* Posicionar la etiqueta "128gb" sobre la imagen */
+            position: absolute;
+            margin-top: 1rem;
+            margin-left: 1rem;
+            padding: 10px;
+            background: rgb(8, 192, 8);
+            color: white;
+            font-weight: 700;
+        }
+
+        
+        .container__compra {
+            display: flex; /* Flex row para situar los elementos al lado del otro */
+            flex-direction: row;
+            align-items: center;
+            flex-wrap: nowrap; /* Para que los items se mantengan en una línea */
+            gap: 1rem;
+        }
+
+            .precio__compra {
+                font-size: 1.5rem;
+                font-weight: 700;
+            }
+
+            .btn__compra {
+                background-color: var(--color-primario);
+                color: #fff;
+                border: none;
+                border-radius: 5px;
+                font-size: 1rem;
+                padding: 0.5em;
+                /*padding relativo al tamaño de fuente */
+            }
+
+        /* Posicionar los elementos de la lista en una línea con opción a salto de línea (wrap) */
+
+            .lista__ventajas {
+                display: flex;
+                justify-content: space-between;
+                flex-wrap: wrap;
+                align-items: center;
+
+                max-width: 100%;
+            }
+        /* Posicionar los iconos y párrafos en una línea */
+
+            .lista__ventajas li {
+            display: flex;
+            gap: 2rem;
+            flex-basis: calc(33.33% - 1rem);
+            }
+
+         .lista__ventajas i {
+            font-size: 1.5rem;
+         }
+         
+
+/* Versión de escritorio */
+
+@media screen and (min-width: 1024px) {
+
+    /* Estilos del header */
+    
+    
+        .wrapper__header {
+            height: 90px;
+            margin: 0px auto;
+    
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+    
+        .logotipo {
+            font-size: 0.7rem;
+            flex-grow: 1;
+            flex-basis: 65%;
+        }
+    
+        #menu {
+            flex-grow: 1;
+            flex-basis: 30%;
+            height: 100%;
+        }
+    
+        #menu ul {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            height: 100%;
+            align-items: center;
+            justify-content: space-between;
+    
+            font-size: 1rem;
+            list-style: none;
+        }
+    
+        .btn__contact {
+            padding: 0.5em;
+            font-size: 1rem;
+            background: none;
+            border: 1px solid rgba(212, 212, 212, 0.8);
+            border-radius: 5px;
+        }
+
+}
+
+
+
 

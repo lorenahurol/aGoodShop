@@ -13,9 +13,9 @@
 
 <body> 
     <!-- Cabecera de la página web- Incluye el logo y el menu de navegación -->
-    <header id="header-container">
+    <header id="header__container">
         <!--Este wrapper envuelve el contenido dentro del header-->
-        <div class="wrapper wrapper-header">
+        <div class="wrapper wrapper__header">
         <!--Logotipo de la tienda-->
         <div class="logotipo">
             <h1>agoodshop</h1>
@@ -26,7 +26,7 @@
                 <li><a href="#">Tienda</a></li>
                 <li><a href="#">Accesorios</a></li>
                 <li><a href="#">Soporte</a></li>
-                <li><button class="contact"><a href="#">Contactar</a></button></li>
+                <li><button class="btn__contact"><a href="#">Contactar</a></button></li>
             </ul>
         </nav>
         </div>
@@ -36,24 +36,29 @@
     <!-- Contenido principal de la página -->
     <main>
         <!--Este wrapper envuelve todo el contenido principal de la página web-->
-        <div class="wrapper wrapper-main">
+        <div class="wrapper main">
         <!--Sección de la oferta principal-->
-        <section id="section-oferta">
-            <div class="container-imagen">
-            <span class="span-tag-green">128gb</span>
+        <section id="section__oferta">
+
+            <!--Contenedor de la imagen-->
+            <div class="container__imagen">
+            <span class="span__tag--green">128gb</span>
             <img src="https://placehold.co/400x400" alt="">
             </div>
-            <div class="container-oferta">
-                <p class="oferta">OFERTA</p>
-                <h1>Compra un iFhone 13 Pro</h1>
+
+            <!--Contenedor de la información de la oferta-->
+            <div class="container__oferta">
+                <span class="span__oferta">OFERTA</span>
+                <h1 class="title__oferta">Compra un iFhone 13 Pro</h1>
                 <p>iFhone 13: Tu nuevo superpoder. Nuestro sistema de cámara dual más avanzado. El chip que hace morder el polvo a la competencia. Un subidón de autonomía que vaya si notarás. Ceramic Shield, más duro que cualquier vidrio de smartphone</p>
                 <p>Pantalla Super Retina XDR de 6,1 pulgadas. Diseño robusto con bordes planos y resistente al agua.</p>
-                <div class="precio-compra">
-                    <p class="precio">938,99</p>
-                    <button class="button-compra">Comprar</button>
+                <!-- Precio y botón de compra, para usar flex -->
+                <div class="container__compra">
+                    <p class="precio__compra">938,99€</p>
+                    <button class="btn__compra">Comprar</button>
                 </div>
                 <!--Lista de ventajas de compra-->
-                <ul class="ventajas">
+                <ul class="lista__ventajas">
                     <li>
                         <i class="fa-solid fa-box"></i>
                         <p>Envío rápido, gratuito y sin contacto</p>
@@ -70,7 +75,7 @@
             </div>
         </section>
         <!--Sección de artículos recomendados-->
-        <section class="section-recomendados">
+        <section class="section__recomendados">
             <h2>Artículos Recomendados</h2>
             <article>
                 <img src="https://placehold.co/250x150" alt="">
@@ -100,14 +105,14 @@
         <!--Sección de sorteo-->
         <section>
             <!-- Información sobre el sorteo -->
-            <div class="sorteo-info">
-            <h3 class="title-sorteo">Participa en el sorteo de un iFhone 13</h3>
+            <div class="sorteo__info">
+            <h3 class="title__sorteo">Participa en el sorteo de un iFhone 13</h3>
             <p>Este verano, ¡venimos cargados de premios! Así que antes de irte de vacaciones, ¡participa en nuestro sorteo! y podrás llevarte un regalo increíble como un nuevo iFhone 13</p>
             <p>Rellena este formulario para ser uno de los afortunados</p>
             </div>
 
             <!-- Formulario para el sorteo -->
-            <form id="formulario-sorteo" action="#" method="post">
+            <form id="formulario__sorteo" action="#" method="post">
                 <label for="nombre">Nombre</label>
                 <input type="text" id="nombre" name="nombre" placeholder="Ari Gold" required>
 
@@ -121,7 +126,7 @@
     </main>
 
     <footer>
-        <p class="footer-copyright">&copy; agoodshop</p>
+        <p class="footer__copyright">&copy; agoodshop</p>
     </footer>
     
 </body>
