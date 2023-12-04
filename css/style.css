@@ -8,12 +8,20 @@
     text-decoration: none;
 }
 
+.button {
+    padding: 0.5em;
+    font-size: 1rem;
+    border-radius: 8px;
+    border: var(--border);
+}
+
 /* Custom properties */
 :root {
     --color-fondo: rgb(255, 255, 255);
     --color-fuente: rgb(0, 0, 0);
     --color-primario: #3B82F6;
     --color-secundario: #E14444;
+    --border: solid 1px rgba(212, 212, 212, 0.8);
 }
 
 /* Estilos general del wrapper que envuelve la página */
@@ -29,7 +37,7 @@
 /* Estilos generales del header y el footer */
 
 #header__container {
-    border-bottom: 1px solid rgba(212, 212, 212, 0.8);
+    border-bottom: var(--border);
 }
 
 footer {
@@ -38,7 +46,7 @@ footer {
     align-items: center;
     justify-content: center;
     font-weight: 700;
-    border-top: 1px solid rgba(212, 212, 212, 0.8);
+    border-top: var(--border);
 }
 
 /* Mobile First */
@@ -89,18 +97,23 @@ footer {
             max-width: 390px;
             /*Tamaño máximo de la imagen cuando escale en diferentes dispositivos*/
         }
+
+        /* Estilo para las etiquetas de color */
+
+        .span__tag {
+            display: inline-block;
+            padding: 10px;
+            color: #fff;
+            font-weight: 700;
+        }
     
         .span__tag--green {
             /* Posicionar la etiqueta "128gb" sobre la imagen */
             position: absolute;
             margin-top: 1rem;
             margin-left: 1rem;
-            padding: 10px;
             background: rgb(8, 192, 8);
-            color: white;
-            font-weight: 700;
         }
-
         
         .container__compra {
             display: flex; /* Flex row para situar los elementos al lado del otro */
@@ -165,31 +178,81 @@ footer {
         flex-direction: column;
         flex-wrap: wrap;
         flex-basis: 80%;
+        
+        
     }
 
     .card {
         display: flex;
-        flex-direction: column;
-        align-items: start;
+        flex-direction: column;   
 
         width: 100%;
-        border: 1px solid rgba(212, 212, 212, 0.8);
+        border: var(--border);
         border-radius: 5px;
         margin-bottom: 20px;
     }
 
     .card img {
         width: 100%;
-        padding-top: 20px;
-        padding-bottom: 20px;
     }
+
+    /* Etiquetas de las cards */
+
+         .span__tag--blue,
+         .span__tag--red {
+             border-radius: 5px;
+    
+         }
+    
+         .span__tag--blue {
+             background-color: var(--color-primario);
+         }
+    
+         .span__tag--red {
+             background-color: var(--color-secundario);
+         }
 
 
     /* Estilos de la sección sorteo */
     
     .section__sorteo {
-        background: var(--color-primario);
+        background: rgba(59, 130, 246, 0.1);
     }
+
+    .wrapper__sorteo {
+        padding: 30px;
+    }
+
+    .title__sorteo {
+        font-size: 2.5rem;
+    }
+
+    #sorteo__form {
+        min-width: 100%;
+    }
+
+    .label {
+        display: block; /*Posiciona la etiqueta y el campo en vertical con un salto de línea */
+        margin-bottom: 5px;
+    }
+
+    .input {
+        min-width: 100%;
+        padding: 1.2em;
+        border-radius: 10px;
+        border: var(--border);
+        margin-bottom: 15px;
+        color: rgba(212, 212, 212, 0.8);
+    }
+
+
+    .btn__enviar {
+        background-color: var(--color-primario);
+        color: #fff;
+        padding: 0.8em;
+
+    }
+
 
 /* Versión de escritorio */
 
@@ -231,11 +294,8 @@ footer {
         }
     
         .btn__contact {
-            padding: 0.5em;
-            font-size: 1rem;
             background: none;
-            border: 1px solid rgba(212, 212, 212, 0.8);
-            border-radius: 5px;
+            border: var(--border);
         }
 
     /* Sección de oferta */
@@ -270,7 +330,26 @@ footer {
             min-height: 400px;
         }
 
-        
+    /* Sección de sorteo */
+
+    .wrapper__sorteo {
+        max-width: 1280px;
+        display: flex;
+        justify-content: space-between;
+        margin: 0 auto;
+    }
+
+        .title__sorteo {
+            font-size: 2.8rem;
+        }
+
+        .container__info {
+            width: 55%;
+        }
+
+        .container__form {
+            width: 35%;
+        }
 
 
 }

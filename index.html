@@ -26,7 +26,7 @@
                 <li><a href="#">Tienda</a></li>
                 <li><a href="#">Accesorios</a></li>
                 <li><a href="#">Soporte</a></li>
-                <li><button class="btn__contact"><a href="#">Contactar</a></button></li>
+                <li><button class="button btn__contact"><a href="#">Contactar</a></button></li>
             </ul>
         </nav>
         </div>
@@ -42,7 +42,7 @@
 
             <!--Contenedor de la imagen-->
             <div class="container__imagen">
-            <span class="span__tag--green">128gb</span>
+            <span class="span__tag span__tag--green">128gb</span>
             <img src="https://placehold.co/400x400" alt="">
             </div>
 
@@ -82,30 +82,30 @@
             <div class="card">
                 <div class="wrapper">
                 <img src="https://placehold.co/250x150" alt="">
-                <h4>Cargador</h4>
+                <h3>Cargador</h3>
                 <p>El adaptador de corriente USB-C de 20W es muy rápido y eficiente, así que va de perlas para cargar tus dispositivos en cualquier lugar.</p>
                 </div>
             </div>
             <div class="card">
                 <div class="wrapper">
                 <img src="https://placehold.co/250x150" alt="">
-                <h4>Base de carga inalámbrica</h4>
-                <span class="tag-red">Oferta</span>
+                <h3>Base de carga inalámbrica</h3>
+                <span class="span__tag span__tag--red">Oferta</span>
                 <p>Sistema de soporte para que sigas usando tu smartphone cómodamente mientras lo cargas. Compatible con carga rápida de 20W.</p>
                 </div>
             </div>
             <div class="card">
                 <div class="wrapper">
                 <img src="https://placehold.co/250x150" alt="">
-                <h4>Funda Piel</h4>
+                <h3>Funda Piel</h3>
                 <p>Fabricadas en piel europea curtida y teñida con un proceso especial, son suaves al tacto y adquieren un tono natural con el tiempo. Los botones de aluminio combinan a la perfección con el acabado de la piel.</p>
                 </div>
             </div>
             <div class="card">
                 <div class="wrapper">
                 <img src="https://placehold.co/250x150" alt="">
-                <h4>Base de carga inalámbrica</h4>
-                <span class="tag-blue">Nuevo</span>
+                <h3>Base de carga inalámbrica</h3>
+                <span class="span__tag span__tag--blue">Nuevo</span>
                 <p>Sistema de soporte para que sigas usando tu smartphone cómodamente mientras lo cargas. Compatible con carga rápida de 20W.</p>
                 </div>
             </div>
@@ -113,25 +113,29 @@
         </section>
         <!--Sección de sorteo-->
         <section class="section__sorteo">
+            <div class="wrapper wrapper__sorteo">
             <!-- Información sobre el sorteo -->
-            <div class="info__sorteo">
-            <h3 class="title__sorteo">Participa en el sorteo de un iFhone 13</h3>
+            <div class="container__info">
+            <h4 class="title__sorteo">Participa en el sorteo de un iFhone 13</h4>
             <p>Este verano, ¡venimos cargados de premios! Así que antes de irte de vacaciones, ¡participa en nuestro sorteo! y podrás llevarte un regalo increíble como un nuevo iFhone 13</p>
             <p>Rellena este formulario para ser uno de los afortunados</p>
             </div>
 
             <!-- Formulario para el sorteo -->
-            <form id="formulario__sorteo" action="#" method="post">
-                <label for="nombre">Nombre</label>
-                <input type="text" id="nombre" name="nombre" placeholder="Ari Gold" required>
+            <div class="container__form">
+            <form id="sorteo__form" action="#" method="post">
+                <label for="nombre" class="label">Nombre</label>
+                <input type="text" id="nombre" name="nombre" class="input" placeholder="Ari Gold" required>
 
-                <label for="email">Email</label>
-                <input type="email" id="email" name="email" placeholder="arigold@mga.com" required>
+                <label for="email" class="label">Email</label>
+                <input type="email" id="email" name="email" class="input" placeholder="arigold@mga.com" required>
 
-                <input type="submit" value="enviar" class="enviar-button">
+                <input type="submit" value="Enviar" class="button btn__enviar">
             </form>
-        </section>
+            </div>
         </div>
+    </section>
+    </div>
     </main>
 
     <footer>
