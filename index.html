@@ -22,7 +22,13 @@
         </div>
         <!--Menu de navegación-->
         <nav id="menu">
-            <ul>
+            <!--Hamburger menu para móviles-->
+            <input type="checkbox" id="menu__checkbox" class="menu__checkbox">
+            <label for="menu__checkbox" class="nav__toggle">
+                <i class="fa-solid fa-bars"></i>
+                <i class="fa-solid fa-xmark"></i>
+            </label>
+            <ul class="menu__nav">
                 <li><a href="#">Tienda</a></li>
                 <li><a href="#">Accesorios</a></li>
                 <li><a href="#">Soporte</a></li>
