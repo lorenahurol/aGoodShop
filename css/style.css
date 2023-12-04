@@ -1,3 +1,12 @@
+/* Custom properties */
+:root {
+    --color-fondo: rgb(255, 255, 255);
+    --color-fuente: rgb(0, 0, 0);
+    --color-primario: #3B82F6;
+    --color-secundario: #E14444;
+    --border: solid 1px rgba(212, 212, 212, 0.8);
+}
+
 /* Estilos generales del documento */
 
 * {
@@ -16,15 +25,6 @@
     border: var(--border);
 }
 
-/* Custom properties */
-:root {
-    --color-fondo: rgb(255, 255, 255);
-    --color-fuente: rgb(0, 0, 0);
-    --color-primario: #3B82F6;
-    --color-secundario: #E14444;
-    --border: solid 1px rgba(212, 212, 212, 0.8);
-}
-
 /* Estilos general del wrapper que envuelve la página */
 
 .wrapper {
@@ -37,12 +37,15 @@
 
 /* Estilos generales del header y el footer */
 
-#header__container {
+header {
+    color: var(--color-fuente);
+    padding: 15px;
+    text-align: center;
     border-bottom: var(--border);
 }
 
 footer {
-    height: 60px;
+    height: 80px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -54,41 +57,45 @@ footer {
 
     /* Estilos del header */
 
-        .wrapper__header {
-            height: 90px;
-            margin: 0px auto;
-    
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        
+    }
+
+    .logotipo a {
+        color: var(--color-fuente);
+        font-size: 1.3rem;
+        font-weight: 700;
+    }
+
+        /* Estilos del menú de navegación */
+
+        .menu__navbar {
+            display: none;
+        }
+
+        .menu__navbar ul {
+            margin: 0;
+            padding: 0;
             display: flex;
-            align-items: center;
-        }
-    
-        .logotipo {
-            font-size: 0.6rem;
-            flex-grow: 1;
-            flex-basis: 65%;
-        }
-    
-        #menu {
-            font-size: 1rem;
-            flex-grow: 1;
-            flex-basis: 10%;
-            height: 100%;
-            
-            position: relative;
+            flex-direction: column;
         }
 
-        .nav__toggle {
-            position: absolute;
-            margin: 0rem 1rem;
-            right: 0;
+        .menu__navbar li {
+            margin-right: 10px;
         }
 
-        .menu__nav li {
-            padding: 5px;
+        .menu__navbar a {
+            color: var(--color-fuente);
+            font-size: 1.3rem;
         }
-    
 
-
+        .menu__icon {
+            font-size: 1.5rem;
+        }
+ 
     /* Estilos de la sección de contenido principal: main */
     
     .main {
@@ -105,6 +112,10 @@ footer {
     }
         
     /* Estilos de la primera sección: oferta */
+
+    .section__oferta {
+        margin-bottom: 20px;
+    }
 
         .span__oferta {
             font-size: 1rem;
@@ -130,6 +141,7 @@ footer {
     
         .container__imagen img {
             width: 100%;
+            min-width: 390px;
             max-width: 390px;
             /*Tamaño máximo de la imagen cuando escale en diferentes dispositivos*/
         }
@@ -140,7 +152,6 @@ footer {
             display: inline-block;
             padding: 10px;
             color: #fff;
-            font-weight: 700;
         }
     
         .span__tag--green {
@@ -201,9 +212,12 @@ footer {
 
     /* Estilos de la sección accesorios recomendados */
 
+    .section__recomendados {
+        margin-bottom: 20px;
+    }
 
     .title__recomendados {
-        font-size: 2.2rem;
+        font-size: 2rem;
         color: var(--color-fuente);
         margin: 0;
         margin-bottom: 20px;
@@ -230,6 +244,16 @@ footer {
 
     .card img {
         width: 100%;
+        min-width: 250px;
+        margin: 20px auto;
+    }
+
+    .card h3 {
+        margin-bottom: 10px;
+    }
+
+    .card span {
+        margin-bottom: 20px;
     }
 
     /* Etiquetas de las cards */
@@ -261,10 +285,12 @@ footer {
 
     .title__sorteo {
         font-size: 2.5rem;
+        margin-bottom: 20px;
     }
 
     #sorteo__form {
         min-width: 100%;
+        margin-top: 30px;
     }
 
     .label {
@@ -294,28 +320,38 @@ footer {
 
 @media screen and (min-width: 1024px) {
 
-    /* Estilos del header */
-    
-        #menu {
-            flex-basis: 30%;
-        }
+    /* Estilos del menú de navegación */
 
-        .menu__nav {
-            display: flex;
-            flex-direction: row;
-            flex-wrap: wrap;
-            height: 100%;
-            align-items: center;
-            justify-content: space-between;
+    .menu__navbar {
+        display: flex;
+        justify-content: space-between;
+
+        min-height: 60px;
+    }
+
+    /* Mostrar el menú de navegación horizontalmente */
+
+    .menu__navbar ul {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .menu__navbar li a {
+        padding: 20px;
+        font-size: 1rem;
+    }
+
+    .menu__icon {
+        /* Ocultar el icono en versión de escritorio */
+        display: none;
+    }
+
+    .btn__contact {
+        background-color: transparent;
+        padding: 0.8em 0.2em;
+    }
     
-            font-size: 1rem;
-            list-style: none;
-        }
-    
-        .btn__contact {
-            background: none;
-            border: var(--border);
-        }
 
     /* Sección de oferta */
 
@@ -351,6 +387,10 @@ footer {
 
     /* Sección de sorteo */
 
+    .section__sorteo {
+        padding-top: 40px;
+        min-height: 400px;
+    }
     .wrapper__sorteo {
         max-width: 1280px;
         display: flex;
@@ -369,8 +409,6 @@ footer {
         .container__form {
             width: 35%;
         }
-
-
 }
 
 
