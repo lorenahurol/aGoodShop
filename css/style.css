@@ -22,7 +22,10 @@
     padding: 0.5em;
     font-size: 1rem;
     border-radius: 8px;
+    background-color: var(--color-primario);
+    color: #fff;
     border: var(--border);
+    cursor: pointer;
 }
 
 /* Estilos general del wrapper que envuelve la página */
@@ -57,14 +60,14 @@ footer {
 
     /* Estilos del header */
 
-    .navbar {
+    .header__navbar {
         display: flex;
         justify-content: space-between;
         align-items: center;
         
     }
 
-    .logotipo a {
+    .header__logotipo a {
         color: var(--color-fuente);
         font-size: 1.3rem;
         font-weight: 700;
@@ -72,27 +75,27 @@ footer {
 
         /* Estilos del menú de navegación */
 
-        .menu__navbar {
+        .header__menu__navbar {
             display: none;
         }
 
-        .menu__navbar ul {
+        .header__menu__navbar ul {
             margin: 0;
             padding: 0;
             display: flex;
             flex-direction: column;
         }
 
-        .menu__navbar li {
+        .header__menu__navbar li {
             margin-right: 10px;
         }
 
-        .menu__navbar a {
+        .header__menu__navbar a {
             color: var(--color-fuente);
             font-size: 1.3rem;
         }
 
-        .menu__icon {
+        .header__menu__icon {
             font-size: 1.5rem;
         }
  
@@ -126,22 +129,21 @@ footer {
             margin-bottom: 10px;
         }
 
-        .title__oferta {
+        .oferta__title {
             font-size: 2.2rem;
             color: var(--color-fuente);
             margin: 0;
             margin-bottom: 20px;
         }
     
-        .container__imagen {
+        .oferta__container--imagen {
             position: relative;
             /* Position relative en el contenedor padre para poder colocar la etiqueta hijo en posicion absoluta */
             margin-bottom: 20px;
         }
     
-        .container__imagen img {
+        .oferta__container--imagen img {
             width: 100%;
-            min-width: 390px;
             max-width: 390px;
             /*Tamaño máximo de la imagen cuando escale en diferentes dispositivos*/
         }
@@ -162,7 +164,7 @@ footer {
             background: rgb(8, 192, 8);
         }
         
-        .container__compra {
+        .oferta__container--comprar {
             display: flex; /* Flex row para situar los elementos al lado del otro */
             flex-direction: row;
             align-items: start;
@@ -171,16 +173,12 @@ footer {
             margin-bottom: 20px;
         }
 
-            .precio__compra {
+            .precio__comprar {
                 font-size: 1.5rem;
                 font-weight: 700;
             }
 
-            .btn__compra {
-                background-color: var(--color-primario);
-                color: #fff;
-                border: none;
-                border-radius: 5px;
+            .btn--comprar {
                 font-size: 1rem;
                 padding: 0.5em;
                 /*padding relativo al tamaño de fuente */
@@ -188,7 +186,7 @@ footer {
 
         /* Posicionar los elementos de la lista en una línea con opción a salto de línea (wrap) */
 
-        .lista__ventajas {
+        .oferta__lista__ventajas {
             display: flex;
             justify-content: space-between;
             flex-wrap: wrap;
@@ -198,14 +196,14 @@ footer {
 
         /* Posicionar los iconos y párrafos en una línea */
 
-            .lista__ventajas li {
+            .oferta__lista__ventajas li {
                 display: flex;
                 gap: 30px;
                 flex-basis: calc(33.33% - 1rem);
                 min-width: 50%;
             }
 
-            .lista__ventajas i {
+            .oferta__lista__ventajas i {
                 font-size: 1.5rem;
                 flex-shrink: 0;
             }
@@ -216,14 +214,14 @@ footer {
         margin-bottom: 20px;
     }
 
-    .title__recomendados {
+    .recomendados__title {
         font-size: 2rem;
         color: var(--color-fuente);
         margin: 0;
         margin-bottom: 20px;
     }
 
-    .cards__recomendados {
+    .recomendados__cards {
         display: flex;
         flex-direction: column;
         flex-wrap: wrap;
@@ -244,7 +242,6 @@ footer {
 
     .card img {
         width: 100%;
-        min-width: 250px;
         margin: 20px auto;
     }
 
@@ -283,12 +280,12 @@ footer {
         padding: 30px;
     }
 
-    .title__sorteo {
+    .sorteo__title {
         font-size: 2.5rem;
         margin-bottom: 20px;
     }
 
-    #sorteo__form {
+    .sorteo__form {
         min-width: 100%;
         margin-top: 30px;
     }
@@ -299,6 +296,7 @@ footer {
     }
 
     .input {
+        box-sizing: border-box;
         min-width: 100%;
         padding: 1.2em;
         border-radius: 10px;
@@ -308,7 +306,7 @@ footer {
     }
 
 
-    .btn__enviar {
+    .btn--enviar {
         background-color: var(--color-primario);
         color: #fff;
         padding: 0.8em;
@@ -322,7 +320,7 @@ footer {
 
     /* Estilos del menú de navegación */
 
-    .menu__navbar {
+    .header__menu__navbar {
         display: flex;
         justify-content: space-between;
 
@@ -331,23 +329,23 @@ footer {
 
     /* Mostrar el menú de navegación horizontalmente */
 
-    .menu__navbar ul {
+    .header__menu__navbar ul {
         display: flex;
         flex-direction: row;
         align-items: center;
     }
 
-    .menu__navbar li a {
+    .header__menu__navbar li a {
         padding: 20px;
         font-size: 1rem;
     }
 
-    .menu__icon {
+    .header__menu__icon {
         /* Ocultar el icono en versión de escritorio */
         display: none;
     }
 
-    .btn__contact {
+    .btn--contact {
         background-color: transparent;
         padding: 0.8em 0.2em;
     }
@@ -360,18 +358,30 @@ footer {
         gap: 40px;
     }
 
-        .container__imagen {
+        .oferta__container--imagen {
             width: 50%;
         }
 
-        .container__compra {
+        .oferta__container--comprar {
             width: 50%;
             max-width: 100%;
         }
 
+        .oferta__lista__ventajas {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: nowrap; /* Se mantiene en una línea */
+            align-items: start;
+            max-width: 500px;
+        }
+
+        .oferta__lista__ventajas li {
+            margin-right: 40px;
+        }
+
     /* Sección de recomendados */
 
-        .cards__recomendados {
+        .recomendados__cards {
             display: flex;
             flex-direction: row;
             flex-wrap: nowrap;
@@ -398,17 +408,19 @@ footer {
         margin: 0 auto;
     }
 
-        .title__sorteo {
+        .sorteo__title {
             font-size: 2.8rem;
         }
 
-        .container__info {
+        .sorteo__container--info {
             width: 55%;
         }
 
-        .container__form {
+        .sorteo__container--form {
             width: 35%;
         }
+
+
 }
 
 
