@@ -18,15 +18,6 @@
     list-style: none;
 }
 
-.button {
-    padding: 0.5em;
-    font-size: 1rem;
-    border-radius: 8px;
-    background-color: var(--color-primario);
-    color: #fff;
-    border: var(--border);
-    cursor: pointer;
-}
 
 /* Estilos general del wrapper que envuelve la página */
 
@@ -56,6 +47,18 @@ footer {
     border-top: var(--border);
 }
 
+/* Estilos generales de los botones */
+
+.button {
+    padding: 0.5em;
+    font-size: 1rem;
+    border-radius: 8px;
+    background-color: var(--color-primario);
+    color: #fff;
+    border: var(--border);
+    cursor: pointer;
+}
+
 /* Mobile First */
 
     /* Estilos del header */
@@ -79,12 +82,6 @@ footer {
             display: none;
         }
 
-        .header__menu__navbar ul {
-            margin: 0;
-            padding: 0;
-            display: flex;
-            flex-direction: column;
-        }
 
         .header__menu__navbar li {
             margin-right: 10px;
@@ -95,9 +92,18 @@ footer {
             font-size: 1.3rem;
         }
 
+            .btn--contact {
+                background-color: transparent;
+                color: var(--color-fuente);
+                padding: 0.8em;
+            }
+
+        /* En dispositivos móviles, se mostrará el icono de menú hamburguesa */
+
         .header__menu__icon {
             font-size: 1.5rem;
         }
+
  
     /* Estilos de la sección de contenido principal: main */
     
@@ -124,7 +130,7 @@ footer {
             font-size: 1rem;
             font-weight: 700;
             color: var(--color-secundario);
-            /* Transformar en display block para poder añadir un margin por debajo */
+            /* Transformar en display block para poder añadir un margen por debajo */
             display: block;
             margin-bottom: 10px;
         }
@@ -170,11 +176,12 @@ footer {
             align-items: start;
             flex-wrap: nowrap; /* Para que los items se mantengan en una línea */
             gap: 30px;
+            margin-top: 20px;
             margin-bottom: 20px;
         }
 
             .precio__comprar {
-                font-size: 1.5rem;
+                font-size: 1.8rem;
                 font-weight: 700;
             }
 
@@ -214,60 +221,57 @@ footer {
         margin-bottom: 20px;
     }
 
-    .recomendados__title {
-        font-size: 2rem;
-        color: var(--color-fuente);
-        margin: 0;
-        margin-bottom: 20px;
-    }
+        .recomendados__title {
+            font-size: 2rem;
+            color: var(--color-fuente);
+            margin: 0;
+            margin-bottom: 20px;
+        }
 
-    .recomendados__cards {
-        display: flex;
-        flex-direction: column;
-        flex-wrap: wrap;
-        flex-basis: 80%;
-        
-        
-    }
+        .recomendados__cards {
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            flex-basis: 80%;   
+        }
 
-    .card {
-        display: flex;
-        flex-direction: column;   
+            .card {
+                display: flex;
+                flex-direction: column;   
 
-        width: 100%;
-        border: var(--border);
-        border-radius: 5px;
-        margin-bottom: 20px;
-    }
+                width: 100%;
+                border: var(--border);
+                border-radius: 5px;
+                margin-bottom: 20px;
+            }
 
-    .card img {
-        width: 100%;
-        margin: 20px auto;
-    }
+                .card img {
+                    width: 100%;
+                    margin: 20px auto;
+                }
 
-    .card h3 {
-        margin-bottom: 10px;
-    }
+                .card h3 {
+                    margin-bottom: 10px;
+                }
 
-    .card span {
-        margin-bottom: 20px;
-    }
+                .card span {
+                    margin-bottom: 20px;
+                }
 
     /* Etiquetas de las cards */
 
-         .span__tag--blue,
-         .span__tag--red {
-             border-radius: 5px;
+            .span__tag--blue,
+            .span__tag--red {
+                border-radius: 5px;
+            }
     
-         }
+            .span__tag--blue {
+                background-color: var(--color-primario);
+            }
     
-         .span__tag--blue {
-             background-color: var(--color-primario);
-         }
-    
-         .span__tag--red {
-             background-color: var(--color-secundario);
-         }
+            .span__tag--red {
+                background-color: var(--color-secundario);
+            }
 
 
     /* Estilos de la sección sorteo */
@@ -290,28 +294,27 @@ footer {
         margin-top: 30px;
     }
 
-    .label {
-        display: block; /*Posiciona la etiqueta y el campo en vertical con un salto de línea */
-        margin-bottom: 5px;
-    }
+        .label {
+            display: block; /*Posiciona la etiqueta y el campo en vertical con un salto de línea */
+            margin-bottom: 5px;
+        }
 
-    .input {
-        box-sizing: border-box;
-        min-width: 100%;
-        padding: 1.2em;
-        border-radius: 10px;
-        border: var(--border);
-        margin-bottom: 15px;
-        color: rgba(212, 212, 212, 0.8);
-    }
+        .input {
+            box-sizing: border-box;
+            min-width: 100%;
+            padding: 1.2em;
+            border-radius: 10px;
+            border: var(--border);
+            margin-bottom: 15px;
+            color: rgba(212, 212, 212, 0.8);
+        }
 
 
-    .btn--enviar {
-        background-color: var(--color-primario);
-        color: #fff;
-        padding: 0.8em;
-
-    }
+        .btn--enviar {
+            background-color: var(--color-primario);
+            color: #fff;
+            padding: 0.8em;
+        }
 
 
 /* Versión de escritorio */
@@ -329,27 +332,21 @@ footer {
 
     /* Mostrar el menú de navegación horizontalmente */
 
-    .header__menu__navbar ul {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-    }
+        .header__menu__navbar ul {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+        }
 
-    .header__menu__navbar li a {
-        padding: 20px;
-        font-size: 1rem;
-    }
+        .header__menu__navbar li a {
+            padding: 20px;
+            font-size: 1rem;
+        }
 
-    .header__menu__icon {
+        .header__menu__icon {
         /* Ocultar el icono en versión de escritorio */
-        display: none;
-    }
-
-    .btn--contact {
-        background-color: transparent;
-        padding: 0.8em 0.2em;
-    }
-    
+            display: none;
+        }    
 
     /* Sección de oferta */
 
@@ -375,9 +372,9 @@ footer {
             max-width: 500px;
         }
 
-        .oferta__lista__ventajas li {
-            margin-right: 40px;
-        }
+            .oferta__lista__ventajas li {
+                margin-right: 40px;
+            }
 
     /* Sección de recomendados */
 
@@ -390,10 +387,10 @@ footer {
             gap: 20px;
         }
 
-        .card {
-            max-width: 25%;
-            min-height: 400px;
-        }
+            .card {
+                max-width: 25%;
+                min-height: 400px;
+            }
 
     /* Sección de sorteo */
 
@@ -419,8 +416,6 @@ footer {
         .sorteo__container--form {
             width: 35%;
         }
-
-
 }
 
 
